@@ -11,3 +11,6 @@
 1. Navigate into the root directory of the repository.
 2. Run the Jekyll site locally: `bundle exec jekyll serve`
 3. Preview the local Jekyll site in the web browser at: `http://localhost:4000`
+
+# File Structure
+
