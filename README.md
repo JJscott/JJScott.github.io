@@ -1,30 +1,54 @@
-# Instruction
+Jekyll Xixia
+============
 
-## Setup
+* Get it from [github](https://github.com/zxixia/jekyll-xixia).
+* See the [live demo](http://zxixia.github.io/jekyll-xixia/).
+* See it [in action on my own blog](http://xixia.info/).
 
-1. Ensure you have [Ruby 2.1.0 or higher installed](https://www.ruby-lang.org/en/downloads/): `ruby --version`
-2. Install Bundler and Jekyll: `gem install bundler jekyll`
-3. Navigate into the root directory of the repository and install the other dependencies from the gemfile: `bundle install`
+A simple and clean Jekyll theme using [bootstrap](http://getbootstrap.com)
+(not to be confused with jekyll-bootstrap) that's easy to modify and very
+modular in component and element reuse.
 
-## Running
+The theme works well on mobile phones, using a collapsable nav bar and hiding the
+sidebar. The links pane in the sidebar is available on mobile through the nav menu,
+and you can do the same thing for any other sections added to the sidebar.
 
-1. Navigate into the root directory of the repository.
-2. Run the Jekyll site locally: `bundle exec jekyll serve`
-3. Preview the local Jekyll site in the web browser at: `http://localhost:4000`
+Don't forget to occassionally merge against my upstream repository so you can get
+the latest changes. Pull requests are encouraged and accepted!
 
-# File Structure
-Copied from https://jekyllrb.com/docs/structure/
+Preview
+=======
+![Xixia](/assets/images/preview.png)
 
-| FILE / DIRECTORY | DESCRIPTION |
-| :--------------: | ----------- |
-| `_config.yml` | Stores configuration data. Many of these options can be specified from the command line executable but it’s easier to specify them here so you don’t have to remember them. |
-| `_drafts` | Drafts are unpublished posts. The format of these files is without a date: title.MARKUP. Learn how to work with drafts. |
-| `_includes` | These are the partials that can be mixed and matched by your layouts and posts to facilitate reuse. The liquid tag `{% include file.ext %}` can be used to include the partial in `_includes/file.ext`. |
-| `_layouts` | These are the templates that wrap posts. Layouts are chosen on a post-by-post basis in the YAML Front Matter, which is described in the next section. The liquid tag `{{ content }}` is used to inject content into the web page. |
-| `_posts` | Your dynamic content, so to speak. The naming convention of these files is important, and must follow the format: YEAR-MONTH-DAY-title.MARKUP. The permalinks can be customized for each post, but the date and markup language are determined solely by the file name. |
-| `_data` | Well-formatted site data should be placed here. The Jekyll engine will autoload all data files (using either the `.yml`, `.yaml`, `.json` or `.csv` formats and extensions) in this directory, and they will be accessible via `site.data`. If there's a file `members.yml` under the directory, then you can access contents of the file through `site.data.members`. |
-| `_sass` | These are sass partials that can be imported into your `main.scss` which will then be processed into a single stylesheet `main.css` that defines the styles to be used by your site. |
-| `_site` | This is where the generated site will be placed (by default) once Jekyll is done transforming it. It's probably a good idea to add this to your `.gitignore` file. |
-| `.jekyll-metadata` | This helps Jekyll keep track of which files have not been modified since the site was last built, and which files will need to be regenerated on the next build. This file will not be included in the generated site. It’s probably a good idea to add this to your `.gitignore` file. |
-| `index.html` or `index.md` and other HTML, Markdown, Textile files | Provided that the file has a YAML Front Matter section, it will be transformed by Jekyll. The same will happen for any `.html`, `.markdown`, `.md`, or `.textile` file in your site's root directory or directories not listed above. |
-| Other Files/Folders | Every other directory and file except for those listed above—such as css and images folders, `favicon.ico` files, and so forth—will be copied verbatim to the generated site. There are plenty of sites already using Jekyll if you’re curious to see how they’re laid out. |
+License
+=======
+
+The content of this theme is distributed and licensed under a
+![License Badge](assets/images/cc_by_88x31.png)
+[Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/legalcode)
+
+    This license lets others distribute, remix, tweak, and build upon your work,
+    even commercially, as long as they credit you for the original creation. This
+    is the most accommodating of licenses offered. Recommended for maximum
+    dissemination and use of licensed materials.
+
+In other words: you can do anything you want with this theme on any site, just please
+provide a link to [the original theme on github](https://github.com/zxixia/jekyll-xixia)
+so I get credit for the original design. Beyond that, have at it!
+
+Thanks
+======
+
+1，[Jekyll][jekyll-url]
+
+2，[Bootstrap][bootstrap-url]
+
+3，[Github][github-url]
+
+4，[Jekyll Clean Theme][Jekyll-Clean-Theme-url]
+
+[jekyll-url]: http://jekyllrb.com/
+[bootstrap-url]: http://getbootstrap.com/
+[github-url]: https://github.com/
+[Jekyll-Clean-Theme-url]: https://github.com/scotte/jekyll-clean
+[xixia-url]: http://xixia.info/
