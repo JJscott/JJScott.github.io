@@ -1,15 +1,15 @@
 <!-- Navagation bar header (Bulma) -->
 
-<nav class="navbar is-primary" role="navigation" aria-label="main navigation">
+<nav class="navbar" role="navigation" aria-label="main navigation">
   <div class="navbar-brand">
     <a class="navbar-item" href="{{ site.baseurl }}/">
       Xixia
     </a>
-    <a role="button" class="navbar-burger burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+    <div class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
       <span aria-hidden="true"></span>
       <span aria-hidden="true"></span>
       <span aria-hidden="true"></span>
-    </a>
+    </div>
   </div>
   <div id="navMenu" class="navbar-menu">
     <div class="navbar-end">
@@ -26,7 +26,7 @@
 <!-- Script to turn burger menu into cross when active -->
 <script type="text/javascript">
   (function() {
-    var burger = document.querySelector('.burger');
+    var burger = document.querySelector('.navbar-burger');
     var nav = document.querySelector('#'+burger.dataset.target);
     burger.addEventListener('click', function(){
       burger.classList.toggle('is-active');

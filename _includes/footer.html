@@ -1,7 +1,7 @@
 <!-- Footer for ALL pages -->
 
 {% assign trans = site.data.values[site.lan] %}
-<div footer="footer">
+<footer class="footer">
   <div class="content has-text-centered">
     <p>&copy;{{ site.time | date: '%Y' }} {{ site.name }}{{ trans.thanks }}
       {% for thank in site.data.thanks %}
@@ -15,4 +15,4 @@
       {% endfor %}
     </p>
   </div>
-</div>
+</footer>

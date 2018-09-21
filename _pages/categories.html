@@ -1,11 +1,12 @@
 ---
 layout: default
+permalink: categories
 ---
 
-<div class="well article">
+<div class="article content">
 {% assign sortedcategories = site.categories | sort %}
 {% for category in sortedcategories %}
-    <h2>{{ category[0] | capitalize }}</h2>
+    <h3>{{ category[0] | capitalize }}</h3>
     <ul>
         {% assign pages_list = category[1] %}
         {% for node in pages_list %}

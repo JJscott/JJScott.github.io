@@ -26,3 +26,7 @@ gems: ['jekyll-paginate']
 
 # build exclusions
 exclude: ['README.md', 'LICENSE', "*.bak"]
+
+# include non-post pages
+include: ['_pages']
+include: ['_articles']

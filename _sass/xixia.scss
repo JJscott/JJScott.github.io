@@ -1,20 +1,19 @@
 @charset "utf-8";
 
 /* main theme */
-$first-color: #28323C !default; /*dark blue*/
-$second-color: #e74c3c !default; /*mild red*/
-$third-color: #0977b6 !default; /*lightish blue*/
+$first-color: #28323C; /*dark blue*/
+$second-color: #e74c3c; /*mild red*/
+$third-color: #0977b6; /*lightish blue*/
 
-$link-color-1:#aaa !default;
+$link-color-1:#aaa;
+$inverse-color: #fff;
+
 
 /* side bar */
-$sidebar-color: #fff !default;
+$sidebar-color: #fff;
 $sidebar-background-color: $first-color;
 $sidebar-a-color: $link-color-1;
 $sidebar-a-hover-color: $second-color;
-
-/* footer */
-$footer-background-color: $first-color;
 
 /* article */
 $article-color: $first-color;
@@ -29,8 +28,15 @@ $article-background-color: #eee;
 
 
 /* Bulma overrides */
-/* nav-bar */
+/* navbar */
 $navbar-background-color: $first-color;
+$navbar-item-color: $inverse-color;
+$navbar-item-hover-color: $inverse-color;
+$navbar-item-hover-background-color: $second-color;
+/*TODO fix burger color*/
+
+/*footer*/
+$footer-background-color: $first-color;
 
 @import "bulma.sass";
 

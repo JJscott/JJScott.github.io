@@ -1,8 +1,9 @@
 ---
 layout: default
+permalink: tags
 ---
 
-<div class="well article">
+<div class="article content">
 {% assign sortedtags = site.tags | sort %}
 {% for tag in sortedtags %}
     <h2>{{ tag[0] | capitalize }}</h2>
