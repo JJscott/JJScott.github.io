@@ -22,11 +22,17 @@ $article-a-color: $third-color;
 $article-a-hover-color: $second-color;
 $article-background-color: #eee;
 
-/* nav-bar */
-$navbar-background-color: $first-color;
-
-
 @import 
     "xixia/_theme",
     "xixia/_syntax-highlighting"
 ;
+
+
+/* Bulma overrides */
+/* nav-bar */
+$navbar-background-color: $first-color;
+
+@import "bulma.sass";
+
+
+
