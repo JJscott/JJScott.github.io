@@ -1,11 +1,10 @@
 ---
 layout: default
 ---
-{% assign trans = site.data.values[site.lan] %}
-<div class="article">
+<div class="article content">
 
   <!-- Date -->
-  <h2><a href="{{ site.baseurl}}{{ page.url }}">{{ page.title }}</a></h2>
+  <h2> {{ page.title }} </h2>
   <span class="post-date">
     {% assign date_format = site.date_format.title %}
     {{ page.date | date: date_format }}
@@ -13,7 +12,6 @@ layout: default
   <hr style="border-top:1px solid #28323C;"/>
 
   <!-- Content -->
-  <div class="post-content content">
   {{ content }}
   <hr style="border-top:1px solid #28323C;"/>
 
@@ -66,16 +64,4 @@ layout: default
     {% assign tags_list = nil %}
     </ul>
   {% endunless %}
-
-  </div>
-</div>
-
-<!-- Navigation for previous and next page -->
-<div class="pagination">
-  {% if page.next %}
-    <a class="btn btn-default" href="{{ site.baseurl}}{{ page.next.url }}" class="next">{{ trans.newer_post }}</a>
-  {% endif %}
-  {% if page.previous %}
-    <a class="btn btn-default" href="{{ site.baseurl}}{{ page.previous.url }}" class="previous">{{ trans.older_post }}</a>
-  {% endif %}
 </div>

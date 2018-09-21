@@ -14,19 +14,20 @@ date_format:
   categories: "%b-%Y"
   tag: "%b-%Y"
 
-# Language
-lan: "en" 
-
-paginate: 10
-
 # styles
 highlighter: rouge
 markdown: kramdown
-gems: ['jekyll-paginate']
 
 # build exclusions
 exclude: ['README.md', 'LICENSE', "*.bak"]
 
 # include non-post pages
-include: ['_pages']
-include: ['_articles']
+include: ['_pages', '_articles', '_tutorial']
+
+collections:
+  articles:
+    output: true
+    permalink: /articles/:path/
+  tutorial:
+    output: true
+    permalink: /tutorial/:path/

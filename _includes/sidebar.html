@@ -1,11 +1,13 @@
-<!-- Navagation sidebar -->
+<!-- Sidebar -->
 
 <!-- Website Logo + description -->
 {% assign trans = site.data.values[site.lan] %}
 <div class="sidebar content">
-  <header class="sidebar-header" role="banner">
+  <header class="sidebar-logo" role="banner">
     <a href="{{ site.baseurl }}/">
-      <img src="{{ site.baseurl }}/assets/images/xixia.gif" class="img-circle" />
+      <figure class="image">
+        <img src="{{ site.baseurl }}/assets/images/xixia.gif" class="is-rounded" />
+      </figure>
     </a>
     <!--
     <h3 class="title">
@@ -13,7 +15,7 @@
     </h3>
     -->
   </header>
-  <div class="text-center">
+  <div class="is-centered">
     {{ site.description }}
   </div>
 </div>

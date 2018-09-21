@@ -17,7 +17,7 @@ body {
     margin-top: 9px;
 }
 
-/* Side Bar (styling stolen from class=well in bottstrap) */
+/* Side Bar (styling stolen from class=well in bootstrap) */
 .sidebar {
     color: $sidebar-color;
     background-color: $sidebar-background-color;
@@ -46,14 +46,13 @@ body {
     color: $sidebar-a-hover-color;
 }
 
-/* Xixia logo */
-.sidebar-header {
+.sidebar-logo {
 	text-align: center;
 	margin-bottom: 10px;
 }
 
 
-/* post style (styling stolen from class=well in bottstrap) */
+/* post style (styling stolen from class=well in bootstrap) */
 .article {
     min-height: 20px;
     padding: 19px;

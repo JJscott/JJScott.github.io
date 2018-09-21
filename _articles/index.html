@@ -1,0 +1,9 @@
+---
+layout: default
+permalink: articles
+---
+<div class="article content">
+  {% for article in site.articles %}
+    <a href="{{ site.baseurl }}{{ articles.url }}">{{ article.title }}</a><br>
+  {% endfor %}
+</div>
