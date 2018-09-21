@@ -2,7 +2,7 @@
 
 <!-- Website Logo + description -->
 {% assign trans = site.data.values[site.lan] %}
-<div class="sidebar well">
+<div class="sidebar">
   <header class="sidebar-header" role="banner">
     <a href="{{ site.baseurl }}/">
       <img src="{{ site.baseurl }}/assets/images/xixia.gif" class="img-circle" />
@@ -20,7 +20,7 @@
 
 <!-- Top posts -->
 {% if site.data.tops.size > 0 %}
-<div class="sidebar well">
+<div class="sidebar">
   <h1>{{ trans.top_posts }}</h1>
   <ul>
     {% for top in site.data.tops %}
@@ -35,7 +35,7 @@
 {% endif %}
 
 <!-- Recent posts -->
-<div class="sidebar well">
+<div class="sidebar">
   <h1>{{ trans.recent_posts }}</h1>
   <ul>
     {% for post in site.posts limit:5 %}
@@ -45,6 +45,6 @@
 </div>
 
 <!-- Links -->
-<div class="sidebar well">
+<div class="sidebar">
   {% include links-list.html %}
 </div>
