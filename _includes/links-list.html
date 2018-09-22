@@ -1,12 +1,14 @@
 <!-- Basic list of links from data/links.yml -->
 {% assign trans = site.data.values[site.lan] %}
-<h1>{{ trans.links }}</h1>
-<ul>
-  {% for link in site.data.links %}
-  <li>
-    <a href="{{ link.url }}">
-      {{ link.title }}
-    </a>
-  </li> 
-  {% endfor %}
-</ul>
+<h1 class="title">Links</h1>
+<div class="content">
+  <ul>
+    {% for link in site.data.links %}
+    <li>
+      <a href="{{ link.url }}">
+        {{ link.title }}
+      </a>
+    </li> 
+    {% endfor %}
+  </ul>
+</div>

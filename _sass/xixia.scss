@@ -4,22 +4,45 @@
 $first-color: #28323C; /*dark blue*/
 $second-color: #e74c3c; /*mild red*/
 $third-color: #0977b6; /*lightish blue*/
+$spacing-unit: 25px !default;
 
-$link-color-1:#aaa;
-$inverse-color: #fff;
+/*
+ * Bulma overrides
+ */
 
+/* general */
+$text: #fff;
+$text-invert: $first-color; 
+$link: #aaa;
+$code-background: #ddd;
+
+/* navbar */
+$navbar-background-color: $first-color;
+$navbar-item-color: $text;
+$navbar-item-hover-color: $text;
+$navbar-item-hover-background-color: $second-color;
+
+/*footer*/
+$footer-background-color: $first-color;
+
+@import "bulma.sass";
+
+
+/*
+ * Other
+ */
 
 /* side bar */
-$sidebar-color: #fff;
+$sidebar-color: $text;
 $sidebar-background-color: $first-color;
-$sidebar-a-color: $link-color-1;
+$sidebar-a-color: $link;
 $sidebar-a-hover-color: $second-color;
 
-/* article */
-$article-color: $first-color;
-$article-a-color: $third-color;
-$article-a-hover-color: $second-color;
-$article-background-color: #eee;
+/* page-content */
+$page-content-color: $text-invert;
+$page-content-a-color: $third-color;
+$page-content-a-hover-color: $second-color;
+$page-content-background-color: #eee;
 
 @import 
     "xixia/_theme",
@@ -27,18 +50,8 @@ $article-background-color: #eee;
 ;
 
 
-/* Bulma overrides */
-/* navbar */
-$navbar-background-color: $first-color;
-$navbar-item-color: $inverse-color;
-$navbar-item-hover-color: $inverse-color;
-$navbar-item-hover-background-color: $second-color;
-/*TODO fix burger color*/
 
-/*footer*/
-$footer-background-color: $first-color;
 
-@import "bulma.sass";
 
 
 

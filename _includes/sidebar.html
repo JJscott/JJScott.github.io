@@ -1,52 +1,50 @@
 <!-- Sidebar -->
 
 <!-- Website Logo + description -->
-{% assign trans = site.data.values[site.lan] %}
-<div class="sidebar content">
+<div class="sidebar">
   <header class="sidebar-logo" role="banner">
     <a href="{{ site.baseurl }}/">
       <figure class="image">
         <img src="{{ site.baseurl }}/assets/images/xixia.gif" class="is-rounded" />
       </figure>
     </a>
-    <!--
-    <h3 class="title">
-    <a href="{{ site.BASE_PATH }}/">{{ site.title }}</a>
-    </h3>
-    -->
   </header>
-  <div class="is-centered">
+  <div class="content">
     {{ site.description }}
   </div>
 </div>
 
 <!-- Top posts -->
 {% if site.data.tops.size > 0 %}
-<div class="sidebar content">
-  <h1>{{ trans.top_posts }}</h1>
-  <ul>
-    {% for top in site.data.tops %}
-      {% for post in site.posts %}
-        {% if post.url contains top.url %}
-          <li><a href="{{ site.baseurl}}{{ post.url }}">{{ post.title }}</a></li>
-        {% endif %}
+<div class="sidebar">
+  <h1 class="title">Top Pages</h1>
+  <div class="content">
+    <ul>
+      {% for top in site.data.tops %}
+        {% for post in site.posts %}
+          {% if post.url contains top.url %}
+            <li><a href="{{ site.baseurl}}{{ post.url }}">{{ post.title }}</a></li>
+          {% endif %}
+        {% endfor %}
       {% endfor %}
-    {% endfor %}
-  </ul>
+    </ul>
+  </div>
 </div>
 {% endif %}
 
 <!-- Recent posts -->
-<div class="sidebar content">
-  <h1>{{ trans.recent_posts }}</h1>
-  <ul>
-    {% for post in site.posts limit:5 %}
-      <li><a href="{{ site.baseurl}}{{ post.url }}">{{ post.title }}</a></li>
-    {% endfor %}
-  </ul>
+<div class="sidebar">
+  <h1 class="title">Recent Posts</h1>
+  <div class="content">
+    <ul>
+      {% for post in site.posts limit:5 %}
+        <li><a href="{{ site.baseurl}}{{ post.url }}">{{ post.title }}</a></li>
+      {% endfor %}
+    </ul>
+  </div>
 </div>
 
 <!-- Links -->
-<div class="sidebar content">
+<div class="sidebar">
   {% include links-list.html %}
 </div>
