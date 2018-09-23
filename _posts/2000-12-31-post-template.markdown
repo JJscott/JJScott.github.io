@@ -8,7 +8,7 @@ description: A Post example written in kramdom for testing elements.
 mathjax: true
 ---
 
-- TOC
+1. TOC
 {:toc}
 
 
@@ -134,14 +134,11 @@ Center and Right aligned columns with footer
 |========|=============|
 | Footer |
 
-
 ## Links
 
 [link text](http://dev.nodeca.com)
 
 [link with title](http://nodeca.github.io/pica/demo/ "title text!")
-
-Autoconverted link https://github.com/nodeca/pica (enable linkify to see)
 
 
 ### [Footnotes](https://github.com/markdown-it/markdown-it-footnote)

@@ -30,11 +30,6 @@ li {
 }
 
 /*
-TODO table styling, etc.
-thead
-tbody
-tfoot
-
 TODO Styling for 
 <ul id="markdown-toc">…</ul>
 */
@@ -94,32 +89,45 @@ TODO Styling for
 /* Content styling */
 .page-content {
   @extend %well;
-  background-color: #f5f5f5;
+  padding-left: 29px;
+  padding-right: 29px;
+
+  background-color: $page-content-background-color;
   border: 1px solid #e3e3e3;
-  font-size: 17px;
   color: $page-content-color;
 
   img { max-width:100%; }
+
   a { color: $page-content-a-color; &:hover{color: $page-content-a-hover-color;} }
 
   table {
     background-color: $table-body-background-color;
     border: 1px solid $table-border-color;
-    td, th { border: 1px solid $table-border-color; padding: 3px 5px; }
-    thead {
-      background: $table-head-background-color;
-      th {
+    td, th {
+      border: 1px solid $table-border-color;
+      padding: 0.25em 0.5em;
+      white-space: nowrap;
+      width: 1%;
+    }
+    thead { 
+      th, td {
+        background: $table-head-background-color;
         border: 1px solid $table-border-color;
         font-weight: bold;
       }
     }
     tfoot {
-      background: $table-foot-background-color;
-      td {
+      th, td {
+        background: $table-foot-background-color;
         border: 1px solid $table-border-color;
-        font-weight: bold;
       }
     }
+  }
+
+  #markdown-toc {
+    background-color: #000;
+    margin: 0;
+    padding: 10px;
   }
 
 
