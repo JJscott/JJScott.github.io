@@ -29,6 +29,16 @@ li {
   }
 }
 
+/*
+TODO table styling, etc.
+thead
+tbody
+tfoot
+
+TODO Styling for 
+<ul id="markdown-toc">…</ul>
+*/
+
 
 /* Flexbox solution to the "Sticky footer" problem */
 .site {
@@ -53,34 +63,26 @@ li {
 }
 
 
-/* Side Bar (styling stolen from class=well in bootstrap) */
-.sidebar {
-  color: $sidebar-color;
-  background-color: $sidebar-background-color;
-  font-size: 1.1em;
+/* Knockoff from Bootstrap's well class*/
+%well {
   min-height: 20px;
   padding: 19px;
   margin-bottom: 20px;
-  border: 1px;
-  border-radius: 4px;
+  border-radius: 10px;
 }
 
-.sidebar h1 {
+
+/* Side Bar */
+.sidebar {
+  @extend %well;
   color: $sidebar-color;
-  font-size: 1.3em;
-}
+  background-color: $sidebar-background-color;
+  font-size: 1.1em;
+  border: 1px;
 
-.sidebar a {
-    color: $sidebar-a-color;
-}
-
-.sidebar li {
-  margin-top: .7em;
-  line-height: 1em;
-}
-
-.sidebar a:hover {
-  color: $sidebar-a-hover-color;
+  h1 { color: $sidebar-color; font-size: 1.3em; }
+  a { color: $sidebar-a-color; &:hover{color: $sidebar-a-hover-color;} }
+  li { margin-top: .7em; line-height: 1em; }
 }
 
 .sidebar-logo {
@@ -89,35 +91,42 @@ li {
 }
 
 
-/* Content styling (styling stolen from class=well in bootstrap) */
+/* Content styling */
 .page-content {
-  min-height: 20px;
-  padding: 19px;
-  margin-bottom: 20px;
+  @extend %well;
   background-color: #f5f5f5;
   border: 1px solid #e3e3e3;
-  border-radius: 4px;
   font-size: 17px;
   color: $page-content-color;
+
+  img { max-width:100%; }
+  a { color: $page-content-a-color; &:hover{color: $page-content-a-hover-color;} }
+
+  table {
+    background-color: $table-body-background-color;
+    border: 1px solid $table-border-color;
+    td, th { border: 1px solid $table-border-color; padding: 3px 5px; }
+    thead {
+      background: $table-head-background-color;
+      th {
+        border: 1px solid $table-border-color;
+        font-weight: bold;
+      }
+    }
+    tfoot {
+      background: $table-foot-background-color;
+      td {
+        border: 1px solid $table-border-color;
+        font-weight: bold;
+      }
+    }
+  }
+
+
 }
 
-.page-content img {
-    max-width:100%;
-}
 
-/* set the link style */
-.page-content a {
-	color: $page-content-a-color;
-}
-
-.page-content a:hover {
-	color: $page-content-a-hover-color;
-}
-
-.icon-style {
-  font-size: 13px;
-}
-
+/*TODO change for dates?*/
 .post-date {
   text-transform: uppercase;
   font-size: 14px;

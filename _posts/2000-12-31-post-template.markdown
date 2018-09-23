@@ -1,10 +1,10 @@
 ---
 layout: post
-title:  "Kramdown Test"
-date:   2018-09-05 14:10:51 +0800
-categories: Jekyll
-tags: Jekyll
-description: A Test for coding kramdown.
+title:  "Post Example"
+date:   2000-12-31 14:10:50 +1200
+categories: [Template]
+tags: [Jekyll, Kramdown, Testing]
+description: A Post example written in kramdom for testing elements.
 mathjax: true
 ---
 
@@ -22,6 +22,8 @@ mathjax: true
 
 ## Horizontal Rules
 
+Requires 3 or more `-`, `*`, or `_`.
+
 ___
 
 ---
@@ -29,20 +31,9 @@ ___
 ***
 
 
-## Typographic replacements
-
-Enable typographer option to see result.
-
-(c) (C) (r) (R) (tm) (TM) (p) (P) +-
-
-test.. test... test..... test?..... test!....
-
-!!!!!! ???? ,,  -- ---
-
-"Smartypants, double quotes" and 'single quotes'
-
-
 ## Emphasis
+
+Italics are a single surrounding `_` or `*` whereas bold is a double surounding `__` or `**`.
 
 **This is bold text**
 
@@ -69,7 +60,7 @@ Unordered
 
 + Create a list by starting a line with `+`, `-`, or `*`
 + Sub-lists are made by indenting 2 spaces:
-  - Marker character change forces new list start:
+  - Indentation matter, the marker doesn't:
     * Ac tristique libero volutpat at
     + Facilisis in pretium nisl aliquet
     - Nulla volutpat aliquam velit
@@ -81,14 +72,10 @@ Ordered
 2. Consectetur adipiscing elit
 3. Integer molestie lorem at massa
 
+Using just  `1.`:
 
 1. You can use sequential numbers...
 1. ...or keep all the numbers as `1.`
-
-Start numbering with offset:
-
-57. foo
-1. bar
 
 
 ## Code
@@ -118,6 +105,15 @@ var foo = function (bar) {
 
 console.log(foo(5));
 ```
+Better highlighting?
+
+{% highlight ruby %}
+def print_hi(name)
+  puts "Hi, #{name}"
+end
+print_hi('Tom')
+#=> prints 'Hi, Tom' to STDOUT.
+{% endhighlight %}
 
 ## Tables
 
@@ -127,13 +123,16 @@ console.log(foo(5));
 | engine | engine to be used for processing templates. Handlebars is the default. |
 | ext    | extension to be used for dest files. |
 
-Center and Right aligned columns
+Center and Right aligned columns with footer
 
+| Header |
 | Option | Description |
 |:------:| -----------:|
 | data   | path to data files to supply the data that will be passed into templates. |
 | engine | engine to be used for processing templates. Handlebars is the default. |
 | ext    | extension to be used for dest files. |
+|========|=============|
+| Footer |
 
 
 ## Links
@@ -143,21 +142,6 @@ Center and Right aligned columns
 [link with title](http://nodeca.github.io/pica/demo/ "title text!")
 
 Autoconverted link https://github.com/nodeca/pica (enable linkify to see)
-
-
-## Plugins
-
-The killer feature of `markdown-it` is very effective support of
-[syntax plugins](https://www.npmjs.org/browse/keyword/markdown-it-plugin).
-
-
-### [Emojies](https://github.com/markdown-it/markdown-it-emoji)
-
-> Classic markup: :wink: :crush: :cry: :tear: :laughing: :yum:
->
-> Shortcuts (emoticons): :-) :-( 8-) ;)
-
-see [how to change output](https://github.com/markdown-it/markdown-it-emoji#change-output) with twemoji.
 
 
 ### [Footnotes](https://github.com/markdown-it/markdown-it-footnote)
@@ -171,7 +155,6 @@ Inline footnote^[Text of inline footnote] definition.
 Duplicated footnote reference[^second].
 
 
-
 ### Mafs
 
 Inline math equation: $$\omega = d\phi / dt$$. Display
@@ -181,6 +164,7 @@ $$I = \int \rho R^{2} dV$$
 
 And note that you can backslash-escape any punctuation characters
 which you wish to be displayed literally, ex.: \`foo\`, \*bar\*, etc.
+
 
 [^first]: Footnote **can have markup** and multiple paragraphs.
 

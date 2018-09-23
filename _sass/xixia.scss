@@ -6,6 +6,13 @@ $second-color: #e74c3c; /*mild red*/
 $third-color: #0977b6; /*lightish blue*/
 $spacing-unit: 25px !default;
 
+/* Corperate themes*/
+$github: #333333;
+$twitter: #1da1f2;
+$facebook: #3b5998;
+$google: #dd4b39;
+$pinterest: #bd081c;
+
 /*
  * Bulma overrides
  */
@@ -43,6 +50,13 @@ $page-content-color: $text-invert;
 $page-content-a-color: $third-color;
 $page-content-a-hover-color: $second-color;
 $page-content-background-color: #eee;
+
+/* page-table */
+$table-color: $text-invert;
+$table-border-color: #A2A2A2;
+$table-head-background-color: #D2D2D2;
+$table-body-background-color: #FAFAFA;
+$table-foot-background-color: #EAEAEA;
 
 @import 
     "xixia/_theme",
