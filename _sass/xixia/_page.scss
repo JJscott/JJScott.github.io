@@ -88,16 +88,6 @@ $page-table-foot-cell-background-color: $white-ter !default;
     padding: $page-blockquote-padding;
   }
 
-  // code {
-  //     background-color: $white-bis;
-  //     color: $text-strong;
-  //     font-size: 0.875em;
-  //     font-weight: normal;
-  //     padding: 0.1em 0.4em;
-  //     border-radius: 5px;
-  //     border: 1px solid $border;
-  // }
-
   ol {
     list-style: decimal outside;
     margin-left: 2em;
@@ -106,7 +96,8 @@ $page-table-foot-cell-background-color: $white-ter !default;
 
   // specific styling for Kramdown {:TOC}
   ol#markdown-toc {
-    background-color: #bbb;
+    background-color: $white-ter;
+    border: 1px solid $border;
     counter-reset: item;
     margin-left: 0em;
     padding: 0.5em;
@@ -140,7 +131,7 @@ $page-table-foot-cell-background-color: $white-ter !default;
     margin: 1.5rem 0rem;
   }
 
-  dd{ margin-left: 2em }
+  dd { margin-left: 2em }
 
   figure {
     &:not(:first-child){ margin-top: 2em; }
@@ -149,8 +140,19 @@ $page-table-foot-cell-background-color: $white-ter !default;
     figcaption { text-align: center; font-style: italic; }
   }
 
+  code.highlighter-rouge {
+      background-color: $white-bis;
+      color: $text-strong;
+      font-size: 0.875em;
+      font-weight: normal;
+      padding: 0.1em 0.4em;
+      border-radius: 5px;
+      border: 1px solid $border;
+  }
+
   pre {
-    //TODO better pre
+    background: #eee;
+    color: #000;
     -webkit-overflow-scrolling: touch;
     overflow-x: auto;
     padding: $page-pre-padding;
@@ -158,7 +160,7 @@ $page-table-foot-cell-background-color: $white-ter !default;
     word-wrap: normal;
   }
 
-  sup, sub{ font-size: 75% }
+  sup, sub { font-size: 75% }
 
   table {
     background-color: $page-table-background-color;
@@ -198,4 +200,10 @@ $page-table-foot-cell-background-color: $white-ter !default;
   &.is-small { font-size: $size-small; }
   &.is-medium { font-size: $size-medium; }
   &.is-large { font-size: $size-large; }
+
+
+  // footnotes in Kramdown
+  .footnotes {
+    font-size: $size-small;
+  }
 }

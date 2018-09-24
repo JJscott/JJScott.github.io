@@ -141,7 +141,7 @@ Center and Right aligned columns with footer
 [link with title](http://nodeca.github.io/pica/demo/ "title text!")
 
 
-### [Footnotes](https://github.com/markdown-it/markdown-it-footnote)
+### Footnotes / References
 
 Footnote 1 link[^first].
 
