@@ -4,12 +4,8 @@
  * MIT License
  */
 .highlight {
-  background: #fff;
+  background: #eee;
   color: #000;
-
-  .highlighter-rouge & {
-    background: #eef;
-  }
 
   .c     { color: #998; font-style: italic } // Comment
   .err   { color: #a61717; background-color: #e3d2d2 } // Error

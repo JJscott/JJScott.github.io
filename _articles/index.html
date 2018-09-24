@@ -2,9 +2,11 @@
 layout: default
 permalink: articles
 ---
-<div class="page-content content">
-  <h1 class="title">Article List</h1>
-  {% for article in site.articles %}
-    <a href="{{ site.baseurl }}{{ articles.url }}">{{ article.title }}</a><br>
-  {% endfor %}
+<div class="page-container">
+  <div class="page-content">
+    <h1 class="title">Article List</h1>
+    {% for article in site.articles %}
+      <a href="{{ site.baseurl }}{{ articles.url }}">{{ article.title }}</a><br>
+    {% endfor %}
+  </div>
 </div>

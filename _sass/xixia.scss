@@ -46,10 +46,8 @@ $sidebar-a-color: $link;
 $sidebar-a-hover-color: $second-color;
 
 /* page-content */
-$page-content-color: $text-invert;
-$page-content-a-color: $third-color;
-$page-content-a-hover-color: $second-color;
-$page-content-background-color: #fff;
+$page-container-color: $text-invert;
+$page-container-background-color: #fff;
 
 /* page-table */
 $table-color: $text-invert;
@@ -59,6 +57,7 @@ $table-body-background-color: #FAFAFA;
 $table-foot-background-color: #EAEAEA;
 
 @import 
+  "xixia/_page",
   "xixia/_theme",
   "xixia/_syntax-highlighting"
 ;

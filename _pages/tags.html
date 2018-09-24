@@ -3,22 +3,24 @@ layout: default
 permalink: tags
 ---
 
-<div class="page-content content">
-{% assign sortedtags = site.tags | sort %}
-{% for tag in sortedtags %}
+<div class="page-container">
+  <div class="page-content">
+  {% assign sortedtags = site.tags | sort %}
+  {% for tag in sortedtags %}
     <h3>{{ tag[0] | capitalize }}</h3>
     <ul>
-        {% assign pages_list = tag[1] %}
-        {% for node in pages_list %}
-            {% if node.title != null %}
-            {% if group == null or group == node.group %}
-                <li><span class="post-date">
-                    {% assign date_format = site.date_format.tag %}
-                    {{ node.date | date: date_format }} </span></span><a href="{{ site.baseurl}}{{ node.url }}"> {{ node.title }}</a></li>
-            {% endif %}
-            {% endif %}
-        {% endfor %}
-        {% assign pages_list = nil %}
+      {% assign pages_list = tag[1] %}
+      {% for node in pages_list %}
+        {% if node.title != null %}
+        {% if group == null or group == node.group %}
+          <li><span class="post-date">
+            {% assign date_format = site.date_format.tag %}
+            {{ node.date | date: date_format }} </span></span><a href="{{ site.baseurl}}{{ node.url }}"> {{ node.title }}</a></li>
+        {% endif %}
+        {% endif %}
+      {% endfor %}
+      {% assign pages_list = nil %}
     </ul>
-{% endfor %}    
+  {% endfor %}    
+  </div>
 </div>

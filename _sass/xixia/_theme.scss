@@ -17,24 +17,6 @@ body {
 }
 
 
-/* Lists */
-ul, ol {
-  margin-left: $spacing-unit;
-}
-
-li {
-  > ul,
-  > ol {
-    margin-bottom: 0;
-  }
-}
-
-/*
-TODO Styling for 
-<ul id="markdown-toc">…</ul>
-*/
-
-
 /* Flexbox solution to the "Sticky footer" problem */
 .site {
   display: flex;
@@ -83,54 +65,6 @@ TODO Styling for
 .sidebar-logo {
 	text-align: center;
 	margin-bottom: 10px;
-}
-
-
-/* Content styling */
-.page-content {
-  @extend %well;
-  padding-left: 29px;
-  padding-right: 29px;
-
-  background-color: $page-content-background-color;
-  border: 1px solid #e3e3e3;
-  color: $page-content-color;
-
-  img { max-width:100%; }
-
-  a { color: $page-content-a-color; &:hover{color: $page-content-a-hover-color;} }
-
-  table {
-    background-color: $table-body-background-color;
-    border: 1px solid $table-border-color;
-    td, th {
-      border: 1px solid $table-border-color;
-      padding: 0.25em 0.5em;
-      white-space: nowrap;
-      width: 1%;
-    }
-    thead { 
-      th, td {
-        background: $table-head-background-color;
-        border: 1px solid $table-border-color;
-        font-weight: bold;
-      }
-    }
-    tfoot {
-      th, td {
-        background: $table-foot-background-color;
-        border: 1px solid $table-border-color;
-      }
-    }
-  }
-
-  #markdown-toc {
-    background-color: #000;
-    margin: 0;
-    padding: 10px;
-  }
-
-
 }
 
 

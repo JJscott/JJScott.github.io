@@ -3,7 +3,7 @@ layout: default
 permalink: blog
 ---
 {% for post in site.posts %}
-<div class="page-content">
+<div class="page-container">
     <span class="post-date">
         {% assign date_format = site.date_format.title %}
         {{ post.date | date: date_format }}
