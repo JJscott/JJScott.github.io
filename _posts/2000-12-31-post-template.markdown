@@ -11,8 +11,11 @@ mathjax: true
 1. TOC
 {:toc}
 
+<p>"\{\{ post.title \}\}"</p>
 
-# h1 Heading 8-)
+
+# h1 Heading \{:.no_toc\}
+{:.no_toc}
 ## h2 Heading
 ### h3 Heading
 #### h4 Heading
