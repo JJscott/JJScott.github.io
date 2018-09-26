@@ -30,6 +30,25 @@ Curabitur vel leo nisi. Nam dictum nisl urna, eu vestibulum nisl vehicula tincid
 ##### h5 Heading
 ###### h6 Heading
 
+## HTML Figures
+<figure class="page-thumbright">
+  <img src="{{site.baseurl}}/assets/images/preview-small.png">
+  <figcaption>Journaling with Tea</figcaption>
+</figure>
+
+Maecenas ut ligula enim. Aenean at nulla at ex ultricies auctor pharetra maximus diam. Sed fermentum nisl sapien. Praesent ultrices metus sed mi luctus, at pretium dui imperdiet. Proin porta risus leo, nec varius metus lobortis ac. Donec turpis lectus, faucibus rhoncus leo quis, aliquet molestie dui. Etiam eros nulla, suscipit id finibus ut, mollis nec ligula. Donec porttitor elit nec viverra rutrum. Praesent sapien lacus, volutpat sit amet dolor et, aliquam feugiat nisi. Vivamus vehicula sapien in lacus eleifend lobortis. Praesent non nibh eget magna dictum posuere sed sed dolor. Aliquam aliquet nisl et leo condimentum consectetur. Nulla at nibh et urna bibendum aliquam quis ut ipsum. Donec elit enim, vestibulum nec rutrum a, lobortis vel tellus. Sed lacus ipsum, lobortis vitae suscipit non, luctus in ligula. Fusce imperdiet lorem eget lectus pellentesque maximus.
+
+<figure class="page-thumbleft">
+  <img src="{{site.baseurl}}/assets/images/preview-small.png">
+  <figcaption>Journaling with Tea</figcaption>
+</figure>
+
+Sed rutrum sapien non neque sagittis, lobortis malesuada tellus sollicitudin. Donec sed congue ante. Pellentesque eu ullamcorper nisl, ut hendrerit metus. Mauris congue quis enim eu lobortis. Etiam fringilla nisi sit amet ante aliquet gravida. Integer quam nulla, cursus eget elit id, lobortis laoreet augue. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla mi odio, ultricies ut auctor vel, consequat vel ex. Quisque euismod a dolor sed mattis. Phasellus sit amet odio eu felis placerat scelerisque et eu arcu. Duis sit amet vestibulum nunc. Praesent sed lectus nibh.
+
+Proin vehicula massa sit amet libero viverra, vel elementum turpis gravida. Morbi maximus nulla quis sapien dictum auctor. In leo eros, suscipit id ex vel, tincidunt sagittis dui. Cras bibendum risus enim, eu tincidunt libero sagittis nec. Praesent dignissim id ex eget accumsan. Praesent sodales tincidunt nisl eget hendrerit. Nunc venenatis vehicula justo ut vulputate. Proin et mauris nibh.
+
+Curabitur porttitor varius congue. Integer lacinia elementum pharetra. Mauris quis iaculis dolor. Sed sollicitudin vestibulum massa, lacinia blandit enim dapibus non. Pellentesque sodales porttitor tortor, eu egestas velit cursus et. Donec tincidunt in magna ac venenatis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec bibendum porta luctus.
+
 
 ## Horizontal Rules
 
@@ -169,11 +188,6 @@ Inline math equation: $$\omega = d\phi / dt$$. Display
 math should get its own line like so:
 
 $$I = \int \rho R^{2} dV$$
-
-And note that you can backslash-escape any punctuation characters
-which you wish to be displayed literally, ex.: \`foo\`, \*bar\*, etc.
-
----
 
 [^first]: Footnote **can have markup** and multiple paragraphs.
 

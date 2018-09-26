@@ -42,6 +42,8 @@ $navbar-divider-height: 2px !default
 
 $navbar-bottom-box-shadow-size: 0 -2px 0 0 !default
 
+$navbar-breakpoint: $tablet !default
+
 =navbar-fixed
   left: 0
   position: fixed
@@ -72,7 +74,7 @@ $navbar-bottom-box-shadow-size: 0 -2px 0 0 !default
         .navbar-link
           &::after
             border-color: $color-invert
-      +desktop
+      +from($navbar-breakpoint)
         .navbar-start,
         .navbar-end
           & > .navbar-item,
@@ -217,7 +219,7 @@ a.navbar-item,
   height: $navbar-divider-height
   margin: 0.5rem 0
 
-+touch
++until($navbar-breakpoint)
   .navbar > .container
     display: block
   .navbar-brand,
@@ -258,7 +260,7 @@ a.navbar-item,
     &.has-navbar-fixed-bottom-touch
       padding-bottom: $navbar-height
 
-+desktop
++from($navbar-breakpoint)
   .navbar,
   .navbar-menu,
   .navbar-start,

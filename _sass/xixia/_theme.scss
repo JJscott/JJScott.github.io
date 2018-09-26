@@ -9,6 +9,7 @@ dl, dd, ol, ul, figure {
 
 html {
   height:100%;
+  font-size: 14px
 }
 
 body {
@@ -25,20 +26,12 @@ body {
 }
 
 .site-content {
-  flex: 1
-}
-
-
-/* Main page content wrapper*/
-.wrap {
-  position:relative;
-  min-height: 100%;
-  padding-bottom: 60px;
+  flex: 1;
+  margin-top: 9px;
   margin-left: 15px;
   margin-right: 15px;
-  margin-top: 9px;
+  margin-bottom: 60px;
 }
-
 
 /* Knockoff from Bootstrap's well class*/
 %well {
