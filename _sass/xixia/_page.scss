@@ -82,6 +82,7 @@ $page-table-foot-cell-background-color: $white-ter !default;
 
   // underline
   h1, h2 {
+    clear: both;
     &:after {
       content: ' ';
       display: block;
@@ -106,11 +107,12 @@ $page-table-foot-cell-background-color: $white-ter !default;
 
   // specific styling for Kramdown {:TOC}
   ol#markdown-toc {
+    display: inline-block;
     background-color: $white-ter;
     border: 1px solid $border;
     counter-reset: item;
     margin-left: 0em;
-    padding: 0.5em;
+    padding: 1em;
     li {
       display: block;
       &:before { content: counters(item, ".") " "; counter-increment: item; }

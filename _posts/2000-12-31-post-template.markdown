@@ -8,13 +8,21 @@ description: A Post example written in kramdom for testing elements.
 mathjax: true
 ---
 
+Main description of the post goes here.
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent aliquet ipsum purus, ac egestas lorem pretium eget. Maecenas auctor rhoncus nulla tincidunt scelerisque. Vivamus luctus libero laoreet condimentum imperdiet. Praesent sed porta enim, ut fermentum nulla. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Ut vitae arcu euismod, luctus neque nec, mollis dui. Quisque iaculis quam lorem, convallis aliquam dolor cursus ut. Vivamus nisl dui, mattis ac tristique vitae, dictum in nisi. Nullam nec dui ac magna commodo pulvinar.
+
+Vivamus non sem at nunc faucibus luctus vitae vitae lorem. Aliquam tempus bibendum ullamcorper. Praesent posuere tellus ut tempor vulputate. Nullam vel dictum sem, eu rutrum nibh. In finibus condimentum sapien, vel placerat arcu pellentesque eu. Duis non pretium nibh. Integer eleifend faucibus massa sed condimentum. In molestie neque et enim aliquet, non varius tellus tincidunt. Aliquam ullamcorper ipsum dui, a maximus erat vehicula ut. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+
+Curabitur vel leo nisi. Nam dictum nisl urna, eu vestibulum nisl vehicula tincidunt. Vivamus vitae ligula dignissim, semper erat a, faucibus nibh. Quisque id quam nec mauris ultricies luctus. Mauris tincidunt magna augue, vitae lacinia justo tincidunt vitae. Nam lacinia pretium laoreet. Donec iaculis eros at pulvinar gravida. In aliquet eleifend vestibulum. Quisque id nibh efficitur, commodo mi sed, egestas ipsum. Pellentesque sed ex in nulla viverra consequat quis id elit. Sed elementum et justo ac sollicitudin. Donec tempus semper arcu non dictum. Vestibulum vehicula orci sit amet venenatis blandit. In congue aliquet eleifend.
+
+<!-- Table of contents goes first -->
 1. TOC
 {:toc}
 
-<p>"\{\{ post.title \}\}"</p>
 
 
-# h1 Heading \{:.no_toc\}
+# h1 Headings should all be \{:.no_toc\}
 {:.no_toc}
 ## h2 Heading
 ### h3 Heading
@@ -144,7 +152,7 @@ Center and Right aligned columns with footer
 [link with title](http://nodeca.github.io/pica/demo/ "title text!")
 
 
-### Footnotes / References
+## Footnotes / References
 
 Footnote 1 link[^first].
 
@@ -155,7 +163,7 @@ Inline footnote^[Text of inline footnote] definition.
 Duplicated footnote reference[^second].
 
 
-### Mafs
+## Mafs
 
 Inline math equation: $$\omega = d\phi / dt$$. Display
 math should get its own line like so:
@@ -165,6 +173,7 @@ $$I = \int \rho R^{2} dV$$
 And note that you can backslash-escape any punctuation characters
 which you wish to be displayed literally, ex.: \`foo\`, \*bar\*, etc.
 
+---
 
 [^first]: Footnote **can have markup** and multiple paragraphs.
 
