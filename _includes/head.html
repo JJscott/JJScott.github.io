@@ -32,5 +32,9 @@
   {% if page.mathjax %}
     <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
   {% endif %}
+  {% if page.goban %}
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/svg.js/2.6.6/svg.min.js"></script>
+    <script src="{{ site.baseurl }}/assets/js/test.js"></script>
+  {% endif %}
   
 </head>
