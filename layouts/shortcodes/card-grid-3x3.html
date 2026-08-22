@@ -1,0 +1,100 @@
+<div class="card-grid-3x3-wrapper">
+  <div class="card-grid-3x3" id="card-grid-3x3-{{ .Get "id" }}">
+    <p>Loading…</p>
+  </div>
+</div>
+
+<style>
+  .card-grid-3x3-wrapper {
+    position: relative;
+    display: inline-block;
+  }
+  .card-grid-3x3 {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    gap: 0px;
+    margin: 0;
+  }
+  .card-grid-3x3 img {
+    width: 100px;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+    margin: 0;
+    transition: filter 0.3s ease, transform 0.2s ease;
+    border: 1px solid transparent;
+  }
+
+  .card-grid-3x3 img:not(.greyed) {
+    border-color: #4c4c4c; /* pick any color you like */
+    &:hover {
+      transform: scale(1.30);
+      cursor: pointer;
+    }
+  }
+
+  .card-grid-3x3 img.greyed {
+    filter: grayscale(100%) opacity(0.25);
+  }
+
+  .card-grid-3x3-complete-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.55);
+    color: #fff;
+    font-weight: 600;
+    font-size: 1.1rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    border-radius: 8px;
+    pointer-events: none;
+  }
+</style>
+
+<script>
+(async function () {
+  const container = document.getElementById("card-grid-3x3-{{ .Get "id" }}");
+  const wrapper = container.closest(".card-grid-3x3-wrapper");
+  const sheetId = "{{ .Get "sheet" | default site.Params.puzzleSheetId }}";
+  const tab = "{{ .Get "tab" | default "Sheet1" }}";
+  const puzzleId = "{{ .Get "id" }}";
+  const ext = "{{ .Get "ext" | default "webp" }}";
+  const letters = ["A", "B", "C", "D", "E", "F", "G", "H", "I"];
+
+  try {
+    const res = await fetch(`https://opensheet.elk.sh/${sheetId}/${tab}`);
+    const rows = await res.json();
+    const row = rows.find(r => r.id === puzzleId);
+
+    container.innerHTML = "";
+    let allGreyed = true;
+
+    letters.forEach(letter => {
+      const fullId = `${puzzleId}_${letter}`;
+      const img = document.createElement("img");
+      img.src = `${fullId}.${ext}`;
+      img.alt = fullId;
+
+      const isGreyed = row && (row[letter] || "").toLowerCase() === "true";
+      if (isGreyed) {
+        img.classList.add("greyed");
+      } else {
+        allGreyed = false;
+      }
+      container.appendChild(img);
+    });
+
+    if (allGreyed) {
+      const overlay = document.createElement("div");
+      overlay.className = "card-grid-3x3-complete-overlay";
+      overlay.textContent = "Completed";
+      wrapper.appendChild(overlay);
+    }
+  } catch (err) {
+    container.innerHTML = "<p>Couldn't load the grid right now.</p>";
+  }
+})();
+</script>
