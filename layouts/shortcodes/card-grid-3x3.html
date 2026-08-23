@@ -2,6 +2,9 @@
   <div class="card-grid-3x3" id="card-grid-3x3-{{ .Get "id" }}">
     <p>Loading…</p>
   </div>
+  {{ if .Get "title" }}
+    <p class="card-grid-3x3-title">{{ .Get "title" }}</p>
+  {{ end }}
 </div>
 
 <style>
@@ -14,6 +17,7 @@
     grid-template-columns: repeat(3, 100px);
     gap: 0px;
     margin: 0;
+    position: relative;
   }
   .card-grid-3x3 img {
     width: 100px;
@@ -21,10 +25,9 @@
     display: block;
     border-radius: 8px;
     margin: 0;
-    transition: filter 0.3s ease, transform 0.2s ease;
+    transition: filter 0.5s ease, transform 0.3s ease;
     border: 1px solid transparent;
   }
-
   .card-grid-3x3 img:not(.greyed) {
     border-color: #4c4c4c; /* pick any color you like */
     &:hover {
@@ -32,18 +35,22 @@
       cursor: pointer;
     }
   }
-
+  .card-grid-3x3-title {
+    margin: 6px 0 0 0;
+    text-align: center;
+    font-size: 0.85rem;
+    font-weight: 500;
+  }
   .card-grid-3x3 img.greyed {
     filter: grayscale(100%) opacity(0.25);
   }
-
   .card-grid-3x3-complete-overlay {
     position: absolute;
     inset: 0;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: rgba(0, 0, 0, 0.55);
+    border: 2px solid #ffffff;
     color: #fff;
     font-weight: 600;
     font-size: 1.1rem;
@@ -91,7 +98,7 @@
       const overlay = document.createElement("div");
       overlay.className = "card-grid-3x3-complete-overlay";
       overlay.textContent = "Completed";
-      wrapper.appendChild(overlay);
+      container.appendChild(overlay);
     }
   } catch (err) {
     container.innerHTML = "<p>Couldn't load the grid right now.</p>";
