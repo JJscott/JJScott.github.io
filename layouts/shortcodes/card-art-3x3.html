@@ -1,0 +1,63 @@
+<div class="card-art-3x3-wrapper">
+  <div class="card-art-3x3" id="card-art-3x3-{{ .Get "id" }}">
+    <p>Loading…</p>
+  </div>
+  {{ if .Get "title" }}
+    <p class="card-art-3x3-title">{{ .Get "title" }}</p>
+  {{ end }}
+</div>
+
+<script>
+  window.__sheetDataCache = window.__sheetDataCache || {};
+  window.getSheetData = window.getSheetData || async function (sheetId, tab) {
+    const key = `${sheetId}/${tab}`;
+    if (!window.__sheetDataCache[key]) {
+      window.__sheetDataCache[key] = fetch(`https://opensheet.elk.sh/${sheetId}/${tab}`)
+        .then(res => res.json());
+    }
+    return window.__sheetDataCache[key];
+  };
+
+  (async function () {
+    const container = document.getElementById("card-art-3x3-{{ .Get "id" }}");
+    const sheetId = "{{ .Get "sheet" | default site.Params.puzzleSheetId }}";
+    const tab = "{{ .Get "tab" | default "Sheet1" }}";
+    const puzzleId = "{{ .Get "id" }}";
+    const ext = "{{ .Get "ext" | default "webp" }}";
+    const letters = ["A", "B", "C", "D", "E", "F", "G", "H", "I"];
+
+    try {
+      const rows = await window.getSheetData(sheetId, tab);
+      const row = rows.find(r => r.id === puzzleId);
+
+      container.innerHTML = "";
+      let allGreyed = true;
+
+      letters.forEach(letter => {
+        const fullId = `${puzzleId}_${letter}`;
+        const img = document.createElement("img");
+        img.src = `${fullId}.${ext}`;
+        img.alt = fullId;
+        img.loading = "lazy";
+
+        const isGreyed = row && (row[letter] || "").toLowerCase() === "true";
+        if (isGreyed) {
+          img.classList.add("greyed");
+        } else {
+          allGreyed = false;
+        }
+        container.appendChild(img);
+      });
+
+      if (allGreyed) {
+        const overlay = document.createElement("div");
+        overlay.className = "card-art-3x3-complete-overlay";
+        overlay.textContent = "Completed";
+        container.appendChild(overlay);
+      }
+    } catch (err) {
+      console.error("Card art load failed:", err);
+      container.innerHTML = "<p>ERROR</p>";
+    }
+  })();
+</script>
