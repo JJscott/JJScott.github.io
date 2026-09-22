@@ -5,11 +5,7 @@ description: "Flesh and Blood art-puzzle pieces currently missing from the colle
 
 **I'm on the hunt to collect every Flesh and Blood puzzle piece.**
 
-## Example
-
-{{< card-art-group >}}
-{{< card-art-3x3 tab="TP" id="PZL000" title="Example:&#10;Color - I want&#10;Grey - I have">}}
-{{< /card-art-group >}}
+## Notice
 
 > "Next stop, World Championship Paris 2026! If you have a puzzle piece that I'm missing, you can redeem it with me for a beautifully crafted, delicious slab of genuine New Zealand Whittaker's Chocolate." - JJScott
 
