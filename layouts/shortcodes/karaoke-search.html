@@ -1,0 +1,25 @@
+{{- /*
+    Usage: {{< karaoke-search>}}
+    Optional: {{< karaoke-search src="data/karaoke.csv" max="100">}}
+*/ -}}
+
+{{- $src := .Get "src" | default "data/karaoke.csv" -}}
+{{- if not (strings.HasPrefix $src "http") }}{{ $src = relURL $src }}{{ end -}}
+{{- $max := .Get "max" | default 100 -}}
+
+{{- /* Load CSS/JS once per page, even if the shortcode is used several times */ -}}
+{{- if not (.Page.Store.Get "karaoke-assets") }}
+{{- .Page.Store.Set "karaoke-assets" true }}
+{{- $css := resources.Get "css/karaoke.css" | resources.Minify | resources.Fingerprint }}
+<link rel="stylesheet" href="{{ $css.RelPermalink }}">
+{{- $js := resources.Get "js/karaoke.js" | resources.Minify | resources.Fingerprint }}
+<script src="{{ $js.RelPermalink }}" defer></script>
+{{- end }}
+
+<div class="ks" data-src="{{ $src }}" data-max="{{ $max }}">
+    <input class="ks-input" type="search" placeholder="Search by number, title, singer, lyricist, composer…"
+        autocomplete="off" autocapitalize="off" spellcheck="false" aria-label="Search karaoke catalog" disabled>
+    <div class="ks-status" role="status" aria-live="polite">Loading catalog…</div>
+    <div class="ks-results"></div>
+    {{ partial "karaoke/templates.html" . }}
+</div>

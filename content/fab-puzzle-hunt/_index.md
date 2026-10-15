@@ -7,11 +7,22 @@ description: "Flesh and Blood art-puzzle pieces currently missing from the colle
 
 ## Notice
 
-> "Next stop, World Championship Paris 2026! If you have a puzzle piece that I'm missing, you can redeem it with me for a beautifully crafted, delicious slab of genuine New Zealand Whittaker's Chocolate." - JJScott
+{{< image-float src="final-slab.webp" alt="2 Slabs of New Zealand Whittaker's Hokey Pokey Crunch Chocolate." float="right" width="200px">}}
 
-![2 Slabs of New Zealand Whittaker's Hokey Pokey Crunch Chocolate](final-slab.webp)
+> "Next stop, World Championship Paris 2026! If you have a puzzle piece that I'm missing, you can redeem it with me for a beautifully crafted, delicious 50g slab of genuine New Zealand Whittaker's Chocolate." - JJScott
+
+<!-- ![2 Slabs of New Zealand Whittaker's Hokey Pokey Crunch Chocolate](final-slab.webp) -->
+
 
 ## Missing Pieces
+
+{{< image-float src="PZL000_D.webp" alt="The back-side of a Flesh and Blood puzzle piece, displayed in color." float="left" width="150px">}}
+
+**Color** pieces are missing from my collection.
+
+**Grey** images are already collected.
+
+Collected cards are updated regularly.
 
 ### Usurp the Shadow Throne World Premiere
 
